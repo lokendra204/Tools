@@ -1,0 +1,242 @@
+/* Screen Annotator - injected styles */
+#__annotator_toolbar__ {
+  position: fixed !important;
+  top: 80px !important;
+  right: 24px !important;
+  z-index: 2147483647 !important;
+  background: rgba(10, 10, 18, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid #1e1e2e !important;
+  border-radius: 16px !important;
+  padding: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  box-shadow:
+    0 24px 64px rgba(0,0,0,0.7),
+    0 0 0 1px rgba(255,255,255,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.06) !important;
+  font-family: 'Segoe UI', system-ui, sans-serif !important;
+  user-select: none !important;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+
+#__annotator_toolbar__.ann-hidden {
+  opacity: 0 !important;
+  transform: translateX(20px) scale(0.95) !important;
+  pointer-events: none !important;
+}
+
+#__annotator_toolbar__.ann-visible {
+  opacity: 1 !important;
+  transform: translateX(0) scale(1) !important;
+  pointer-events: all !important;
+}
+
+#__annotator_canvas__ {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483646 !important;
+  pointer-events: none !important;
+  display: block !important;
+}
+
+#__annotator_canvas__.ann-draw-active {
+  pointer-events: all !important;
+}
+
+.__ann_drag_handle__ {
+  width: 100% !important;
+  height: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: grab !important;
+  margin-bottom: 2px !important;
+}
+
+.__ann_drag_handle__:active { cursor: grabbing !important; }
+
+.__ann_drag_handle__::after {
+  content: '' !important;
+  width: 24px !important;
+  height: 3px !important;
+  background: #2a2a40 !important;
+  border-radius: 2px !important;
+  display: block !important;
+}
+
+.__ann_label__ {
+  font-size: 9px !important;
+  color: #4a4a6a !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  text-align: center !important;
+  padding: 2px 6px !important;
+  font-family: monospace !important;
+}
+
+.__ann_divider__ {
+  height: 1px !important;
+  background: #1e1e2e !important;
+  margin: 2px 4px !important;
+}
+
+.__ann_tool_btn__ {
+  width: 46px !important;
+  height: 46px !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  transition: all 0.18s ease !important;
+  color: #4a4a6a !important;
+  padding: 0 !important;
+  outline: none !important;
+}
+
+.__ann_tool_btn__:hover {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: #1e1e2e !important;
+  color: #c0c0d8 !important;
+}
+
+.__ann_tool_btn__.ann-active-tool {
+  background: rgba(124,106,255,0.15) !important;
+  border-color: rgba(124,106,255,0.5) !important;
+  color: #9d8fff !important;
+  box-shadow: 0 0 12px rgba(124,106,255,0.2) !important;
+}
+
+.__ann_tool_btn__ svg {
+  width: 19px !important;
+  height: 19px !important;
+  display: block !important;
+}
+
+.__ann_tool_lbl__ {
+  font-size: 9px !important;
+  letter-spacing: 0.05em !important;
+  opacity: 0.7 !important;
+  font-family: monospace !important;
+  line-height: 1 !important;
+}
+
+.__ann_color_row__ {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 4px !important;
+  padding: 2px 6px !important;
+  justify-content: center !important;
+}
+
+.__ann_color_dot__ {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  border: 2px solid transparent !important;
+  transition: transform 0.15s ease !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.__ann_color_dot__:hover { transform: scale(1.3) !important; }
+.__ann_color_dot__.ann-color-active {
+  border-color: #ffffff !important;
+  transform: scale(1.15) !important;
+}
+
+.__ann_size_wrap__ {
+  padding: 4px 8px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.__ann_size_label__ {
+  font-size: 9px !important;
+  color: #4a4a6a !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  font-family: monospace !important;
+}
+
+.__ann_slider__ {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: #1e1e2e !important;
+  border-radius: 2px !important;
+  outline: none !important;
+  cursor: pointer !important;
+}
+
+.__ann_slider__::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 12px !important;
+  height: 12px !important;
+  background: #7c6aff !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  box-shadow: 0 0 6px rgba(124,106,255,0.5) !important;
+}
+
+.__ann_off_btn__ {
+  width: 46px !important;
+  height: 34px !important;
+  background: rgba(255,70,70,0.08) !important;
+  border: 1px solid rgba(255,70,70,0.2) !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  color: #ff6060 !important;
+  font-size: 9px !important;
+  font-family: monospace !important;
+  letter-spacing: 0.04em !important;
+  transition: all 0.18s ease !important;
+  padding: 0 !important;
+  outline: none !important;
+}
+
+.__ann_off_btn__:hover {
+  background: rgba(255,70,70,0.18) !important;
+  border-color: rgba(255,70,70,0.5) !important;
+}
+
+.__ann_status_chip__ {
+  position: fixed !important;
+  bottom: 24px !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(20px) !important;
+  z-index: 2147483647 !important;
+  background: rgba(10,10,18,0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid #1e1e2e !important;
+  border-radius: 999px !important;
+  padding: 6px 16px !important;
+  font-size: 11px !important;
+  color: #4a4a6a !important;
+  letter-spacing: 0.08em !important;
+  font-family: monospace !important;
+  opacity: 0 !important;
+  transition: all 0.3s ease !important;
+  pointer-events: none !important;
+  white-space: nowrap !important;
+}
+
+.__ann_status_chip__.ann-chip-show {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
